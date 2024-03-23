@@ -4,6 +4,14 @@ const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const deps = require("./package.json").dependencies;
 
+const headerUrl = process.env.HEADER_URL
+  ? process.env.HEADER_URL
+  : "http://localhost:3001";
+
+const cartUrl = process.env.CART_URL
+  ? process.env.CART_URL
+  : "http://localhost:3002";
+
 const {
   NativeFederationTypeScriptHost,
 } = require("@module-federation/native-federation-typescript/webpack");
@@ -15,8 +23,8 @@ const {
 const moduleFederationConfig = {
   name: "main",
   remotes: {
-    header: "header@http://localhost:3001/remoteEntry.js",
-    cart: "cart@http://localhost:3002/remoteEntry.js",
+    header: `header@${headerUrl}/remoteEntry.js`,
+    cart: `cart@${cartUrl}/remoteEntry.js`,
   },
   shared: {
     ...deps,
@@ -81,7 +89,10 @@ module.exports = {
     }),
     new ModuleFederationPlugin(moduleFederationConfig),
     new ExternalTemplateRemotesPlugin(),
-    NativeFederationTypeScriptHost({ moduleFederationConfig }),
+    NativeFederationTypeScriptHost({
+      moduleFederationConfig,
+      deleteTypesFolder: false,
+    }),
     NativeFederationTestsHost({
       moduleFederationConfig,
       additionalBundlerConfig: { format: "esm" },

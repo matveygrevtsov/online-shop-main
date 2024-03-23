@@ -89,14 +89,10 @@ module.exports = {
     }),
     new ModuleFederationPlugin(moduleFederationConfig),
     new ExternalTemplateRemotesPlugin(),
-<<<<<<< HEAD
     NativeFederationTypeScriptHost({
       moduleFederationConfig,
       deleteTypesFolder: false,
     }),
-=======
-    NativeFederationTypeScriptHost({ moduleFederationConfig }),
->>>>>>> origin/main
     NativeFederationTestsHost({
       moduleFederationConfig,
       additionalBundlerConfig: { format: "esm" },

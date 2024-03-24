@@ -1,10 +1,6 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
-
-interface UserSignUpCredentials {
-  email: string;
-  password: string;
-}
+import { UserAuthCredentials } from "../../../../types";
 
 const formItemLayout = {
   labelCol: {
@@ -31,11 +27,11 @@ const tailFormItemLayout = {
 };
 
 interface SignUpFormProps {
-  onSubmit: (userSignUpCredentials: UserSignUpCredentials) => void;
+  onSubmit: (userSignUpCredentials: UserAuthCredentials) => void;
 }
 
 export const SignUpForm = ({ onSubmit }: SignUpFormProps): JSX.Element => {
-  const [form] = Form.useForm<UserSignUpCredentials>();
+  const [form] = Form.useForm<UserAuthCredentials>();
 
   return (
     <Form

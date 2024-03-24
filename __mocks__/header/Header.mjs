@@ -86,8 +86,8 @@ var require_classnames = __commonJS({
 });
 
 // src/components/Header.tsx
-import React9, { useMemo } from "react";
-import { Badge, Button, Flex, Menu } from "antd";
+import React5, { useMemo } from "react";
+import { Button, Flex, Menu } from "antd";
 
 // node_modules/@ant-design/icons/es/components/Context.js
 import { createContext } from "react";
@@ -1289,27 +1289,8 @@ Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 var AntdIcon_default = Icon;
 
-// node_modules/@ant-design/icons/es/icons/LoginOutlined.js
-import * as React4 from "react";
-
-// node_modules/@ant-design/icons-svg/es/asn/LoginOutlined.js
-var LoginOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "defs", "attrs": {}, "children": [{ "tag": "style", "attrs": {} }] }, { "tag": "path", "attrs": { "d": "M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 01520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 01270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 010 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z" } }] }, "name": "login", "theme": "outlined" };
-var LoginOutlined_default = LoginOutlined;
-
-// node_modules/@ant-design/icons/es/icons/LoginOutlined.js
-var LoginOutlined2 = function LoginOutlined3(props, ref) {
-  return /* @__PURE__ */ React4.createElement(AntdIcon_default, _extends({}, props, {
-    ref,
-    icon: LoginOutlined_default
-  }));
-};
-if (process.env.NODE_ENV !== "production") {
-  LoginOutlined2.displayName = "LoginOutlined";
-}
-var LoginOutlined_default2 = /* @__PURE__ */ React4.forwardRef(LoginOutlined2);
-
 // node_modules/@ant-design/icons/es/icons/LogoutOutlined.js
-import * as React5 from "react";
+import * as React4 from "react";
 
 // node_modules/@ant-design/icons-svg/es/asn/LogoutOutlined.js
 var LogoutOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 01-112.7 75.9A352.8 352.8 0 01512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 01-112.7-75.9 353.28 353.28 0 01-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 7.9 7.9 15.3 16.1 22.4 24.5 3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82 271.7 82.6 79.6 277.1 82 516.4 84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7 3.4-5.3-.4-12.3-6.7-12.3zm88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 000-12.6z" } }] }, "name": "logout", "theme": "outlined" };
@@ -1317,7 +1298,7 @@ var LogoutOutlined_default = LogoutOutlined;
 
 // node_modules/@ant-design/icons/es/icons/LogoutOutlined.js
 var LogoutOutlined2 = function LogoutOutlined3(props, ref) {
-  return /* @__PURE__ */ React5.createElement(AntdIcon_default, _extends({}, props, {
+  return /* @__PURE__ */ React4.createElement(AntdIcon_default, _extends({}, props, {
     ref,
     icon: LogoutOutlined_default
   }));
@@ -1325,108 +1306,21 @@ var LogoutOutlined2 = function LogoutOutlined3(props, ref) {
 if (process.env.NODE_ENV !== "production") {
   LogoutOutlined2.displayName = "LogoutOutlined";
 }
-var LogoutOutlined_default2 = /* @__PURE__ */ React5.forwardRef(LogoutOutlined2);
-
-// node_modules/@ant-design/icons/es/icons/ShoppingCartOutlined.js
-import * as React6 from "react";
-
-// node_modules/@ant-design/icons-svg/es/asn/ShoppingCartOutlined.js
-var ShoppingCartOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "0 0 1024 1024", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M922.9 701.9H327.4l29.9-60.9 496.8-.9c16.8 0 31.2-12 34.2-28.6l68.8-385.1c1.8-10.1-.9-20.5-7.5-28.4a34.99 34.99 0 00-26.6-12.5l-632-2.1-5.4-25.4c-3.4-16.2-18-28-34.6-28H96.5a35.3 35.3 0 100 70.6h125.9L246 312.8l58.1 281.3-74.8 122.1a34.96 34.96 0 00-3 36.8c6 11.9 18.1 19.4 31.5 19.4h62.8a102.43 102.43 0 00-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7h161.1a102.43 102.43 0 00-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7H923c19.4 0 35.3-15.8 35.3-35.3a35.42 35.42 0 00-35.4-35.2zM305.7 253l575.8 1.9-56.4 315.8-452.3.8L305.7 253zm96.9 612.7c-17.4 0-31.6-14.2-31.6-31.6 0-17.4 14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 01-31.6 31.6zm325.1 0c-17.4 0-31.6-14.2-31.6-31.6 0-17.4 14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 01-31.6 31.6z" } }] }, "name": "shopping-cart", "theme": "outlined" };
-var ShoppingCartOutlined_default = ShoppingCartOutlined;
-
-// node_modules/@ant-design/icons/es/icons/ShoppingCartOutlined.js
-var ShoppingCartOutlined2 = function ShoppingCartOutlined3(props, ref) {
-  return /* @__PURE__ */ React6.createElement(AntdIcon_default, _extends({}, props, {
-    ref,
-    icon: ShoppingCartOutlined_default
-  }));
-};
-if (process.env.NODE_ENV !== "production") {
-  ShoppingCartOutlined2.displayName = "ShoppingCartOutlined";
-}
-var ShoppingCartOutlined_default2 = /* @__PURE__ */ React6.forwardRef(ShoppingCartOutlined2);
-
-// node_modules/@ant-design/icons/es/icons/ShoppingOutlined.js
-import * as React7 from "react";
-
-// node_modules/@ant-design/icons-svg/es/asn/ShoppingOutlined.js
-var ShoppingOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-432-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16H400v-16zm392 544H232V384h96v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h224v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h96v456z" } }] }, "name": "shopping", "theme": "outlined" };
-var ShoppingOutlined_default = ShoppingOutlined;
-
-// node_modules/@ant-design/icons/es/icons/ShoppingOutlined.js
-var ShoppingOutlined2 = function ShoppingOutlined3(props, ref) {
-  return /* @__PURE__ */ React7.createElement(AntdIcon_default, _extends({}, props, {
-    ref,
-    icon: ShoppingOutlined_default
-  }));
-};
-if (process.env.NODE_ENV !== "production") {
-  ShoppingOutlined2.displayName = "ShoppingOutlined";
-}
-var ShoppingOutlined_default2 = /* @__PURE__ */ React7.forwardRef(ShoppingOutlined2);
-
-// node_modules/@ant-design/icons/es/icons/UserAddOutlined.js
-import * as React8 from "react";
-
-// node_modules/@ant-design/icons-svg/es/asn/UserAddOutlined.js
-var UserAddOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M678.3 642.4c24.2-13 51.9-20.4 81.4-20.4h.1c3 0 4.4-3.6 2.2-5.6a371.67 371.67 0 00-103.7-65.8c-.4-.2-.8-.3-1.2-.5C719.2 505 759.6 431.7 759.6 349c0-137-110.8-248-247.5-248S264.7 212 264.7 349c0 82.7 40.4 156 102.6 201.1-.4.2-.8.3-1.2.5-44.7 18.9-84.8 46-119.3 80.6a373.42 373.42 0 00-80.4 119.5A373.6 373.6 0 00137 888.8a8 8 0 008 8.2h59.9c4.3 0 7.9-3.5 8-7.8 2-77.2 32.9-149.5 87.6-204.3C357 628.2 432.2 597 512.2 597c56.7 0 111.1 15.7 158 45.1a8.1 8.1 0 008.1.3zM512.2 521c-45.8 0-88.9-17.9-121.4-50.4A171.2 171.2 0 01340.5 349c0-45.9 17.9-89.1 50.3-121.6S466.3 177 512.2 177s88.9 17.9 121.4 50.4A171.2 171.2 0 01683.9 349c0 45.9-17.9 89.1-50.3 121.6C601.1 503.1 558 521 512.2 521zM880 759h-84v-84c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v84h-84c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h84v84c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-84h84c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z" } }] }, "name": "user-add", "theme": "outlined" };
-var UserAddOutlined_default = UserAddOutlined;
-
-// node_modules/@ant-design/icons/es/icons/UserAddOutlined.js
-var UserAddOutlined2 = function UserAddOutlined3(props, ref) {
-  return /* @__PURE__ */ React8.createElement(AntdIcon_default, _extends({}, props, {
-    ref,
-    icon: UserAddOutlined_default
-  }));
-};
-if (process.env.NODE_ENV !== "production") {
-  UserAddOutlined2.displayName = "UserAddOutlined";
-}
-var UserAddOutlined_default2 = /* @__PURE__ */ React8.forwardRef(UserAddOutlined2);
+var LogoutOutlined_default2 = /* @__PURE__ */ React4.forwardRef(LogoutOutlined2);
 
 // src/components/Header.tsx
-import { useLocation } from "react-router-dom";
-var Header = ({ navigate }) => {
+import { useLocation, useNavigate } from "react-router-dom";
+var Header = ({ items, onLogout }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const selectedKeys = useMemo(
     () => location?.pathname ? [location.pathname] : [],
     [location?.pathname]
   );
-  const items = useMemo(
-    () => [
-      {
-        label: "ONLINE-SHOP",
-        key: "/main",
-        icon: /* @__PURE__ */ React9.createElement(ShoppingOutlined_default2, null)
-      },
-      {
-        label: "\u041A\u043E\u0440\u0437\u0438\u043D\u0430",
-        key: "/cart",
-        icon: /* @__PURE__ */ React9.createElement(Badge, { count: 5, size: "small" }, /* @__PURE__ */ React9.createElement(ShoppingCartOutlined_default2, null))
-      },
-      // Данные вкладки нужно показывать только неавторизованному юзеру:
-      {
-        label: "\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F",
-        key: "/sign-up",
-        icon: /* @__PURE__ */ React9.createElement(UserAddOutlined_default2, null)
-      },
-      {
-        label: "\u0412\u043E\u0439\u0442\u0438",
-        key: "/sign-in",
-        icon: /* @__PURE__ */ React9.createElement(LoginOutlined_default2, null)
-      }
-    ],
-    []
-  );
   const handleMenuClick = ({ key }) => {
     navigate(key);
   };
-  const handleLogoutClick = () => {
-    alert(
-      "\u041D\u0430 \u044D\u0442\u043E\u043C \u043C\u043E\u043C\u0435\u043D\u0442\u0435, \u043F\u043E-\u0441\u0443\u0442\u0438, \u0434\u043E\u043B\u0436\u0435\u043D \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442\u044C \u043B\u043E\u0433\u0430\u0443\u0442, \u043D\u043E \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F \u043F\u043E\u043A\u0430 \u0447\u0442\u043E \u043D\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 :)"
-    );
-  };
-  return /* @__PURE__ */ React9.createElement(Flex, { align: "center" }, /* @__PURE__ */ React9.createElement(
+  return /* @__PURE__ */ React5.createElement(Flex, { align: "center" }, /* @__PURE__ */ React5.createElement(
     Menu,
     {
       theme: "dark",
@@ -1438,7 +1332,7 @@ var Header = ({ navigate }) => {
         width: "100%"
       }
     }
-  ), /* @__PURE__ */ React9.createElement(Button, { danger: true, type: "primary", onClick: handleLogoutClick }, /* @__PURE__ */ React9.createElement(LogoutOutlined_default2, null), "\u0412\u044B\u0439\u0442\u0438"));
+  ), onLogout && /* @__PURE__ */ React5.createElement(Button, { danger: true, type: "primary", onClick: onLogout }, /* @__PURE__ */ React5.createElement(LogoutOutlined_default2, null), "\u0412\u044B\u0439\u0442\u0438"));
 };
 var Header_default = Header;
 export {

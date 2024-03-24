@@ -1,5 +1,8 @@
 import React from "react";
-declare const Header: ({ navigate }: {
-    navigate: any;
-}) => React.JSX.Element;
+import { ItemType, MenuItemType } from "antd/es/menu/hooks/useItems";
+interface HeaderProps {
+    items: ItemType<MenuItemType>[];
+    onLogout: (() => void) | undefined;
+}
+declare const Header: ({ items, onLogout }: HeaderProps) => React.JSX.Element;
 export default Header;

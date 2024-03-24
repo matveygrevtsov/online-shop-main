@@ -6,7 +6,7 @@ export const AuthorizedUserDataSchema = z.object({
   idsOfProductsInCart: z.array(z.string()),
 });
 
-type AuthorizedUserData = z.infer<typeof AuthorizedUserDataSchema>;
+export type AuthorizedUserData = z.infer<typeof AuthorizedUserDataSchema>;
 
 export const UserStateSchema = z.union([
   z.object({
@@ -28,13 +28,12 @@ const slice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    logout() {
-      window.localStorage.clear();
-
+    setLoading() {
       return {
-        status: "guest",
+        status: "loading",
       };
     },
+
     setUserData(_, action: PayloadAction<AuthorizedUserData>) {
       const userData = action.payload;
 
@@ -48,9 +47,12 @@ const slice = createSlice({
         userData,
       };
     },
-    setLoading() {
+
+    setUserGuest() {
+      window.localStorage.clear();
+
       return {
-        status: "loading",
+        status: "guest",
       };
     },
   },

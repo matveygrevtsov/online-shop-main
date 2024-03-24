@@ -3,7 +3,7 @@ import { ELocalStorageKey } from "../types";
 import { useAppDispatch } from "../store";
 import { AuthorizedUserDataSchema, userStoreActions } from "../store/userSlice";
 
-const { setUserData, logout } = userStoreActions;
+const { setUserData, setUserGuest } = userStoreActions;
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ export const useAuth = () => {
       );
 
       if (!userDataFromLocalStorage) {
-        dispatch(logout());
+        dispatch(setUserGuest());
         return;
       }
 
@@ -26,7 +26,7 @@ export const useAuth = () => {
       if (parse.success) {
         dispatch(setUserData(parse.data));
       } else {
-        dispatch(logout());
+        dispatch(setUserGuest());
       }
     };
 

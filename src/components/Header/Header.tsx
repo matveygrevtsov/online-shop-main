@@ -11,14 +11,12 @@ import {
 import { Badge } from "antd";
 import { Header as AntdHeader } from "antd/es/layout/layout";
 import { RoutePath } from "../../types";
-import { userStoreActions } from "../../store/userSlice";
+import { logOutAsyncThunk } from "../../store/userSlice/asyncThunks/logOutAsyncThunk";
 
 // @ts-ignore
 const RemoteHeader = lazy<typeof HeaderType>(() => import("header/Header"));
 
 type Items = ItemType<MenuItemType>[];
-
-const { logout } = userStoreActions;
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -71,7 +69,7 @@ export const Header = () => {
   }, [userData]);
 
   const handleLogout = () => {
-    dispatch(logout());
+    dispatch(logOutAsyncThunk());
   };
 
   return (

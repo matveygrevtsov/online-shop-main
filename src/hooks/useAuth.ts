@@ -31,8 +31,6 @@ export const useAuth = () => {
     };
 
     const handleLocalStorageChange = (event: StorageEvent) => {
-      alert(1)
-
       if (
         event.key !== ELocalStorageKey.UserData ||
         event.oldValue === event.newValue

@@ -6,7 +6,7 @@ import { userStoreActions } from "../../store/userSlice";
 import { signUpAsyncThunk } from "../../store/userSlice/asyncThunks/signUpAsyncThunk";
 import { useNotification } from "../../hooks/useNotification";
 
-const { setLoading, setUserData, logout } = userStoreActions;
+const { setLoading, setUserGuest } = userStoreActions;
 
 export const SignUpPage = () => {
   const dispatch = useAppDispatch();
@@ -17,22 +17,13 @@ export const SignUpPage = () => {
 
     dispatch(signUpAsyncThunk(userAuthCredentials))
       .unwrap()
-      .then(
-        () => {
-          dispatch(
-            setUserData({
-              idsOfProductsInCart: [],
-            })
-          );
-        },
-        (error: any) => {
-          notification.error({
-            message: "Не удалось зарегистрироваться",
-            description: JSON.stringify(error),
-          });
-          dispatch(logout());
-        }
-      );
+      .catch((error: any) => {
+        notification.error({
+          message: "Не удалось зарегистрироваться",
+          description: JSON.stringify(error),
+        });
+        dispatch(setUserGuest());
+      });
   };
 
   return <SignUpForm onSubmit={handleSubmit} />;

@@ -6,7 +6,7 @@ import { userStoreActions } from "../../store/userSlice";
 import { signInAsyncThunk } from "../../store/userSlice/asyncThunks/signInAsyncThunk";
 import { useNotification } from "../../hooks/useNotification";
 
-const { setLoading, setUserData, logout } = userStoreActions;
+const { setLoading, setUserGuest } = userStoreActions;
 
 export const SignInPage = () => {
   const dispatch = useAppDispatch();
@@ -17,22 +17,13 @@ export const SignInPage = () => {
 
     dispatch(signInAsyncThunk(userAuthCredentials))
       .unwrap()
-      .then(
-        () => {
-          dispatch(
-            setUserData({
-              idsOfProductsInCart: [],
-            })
-          );
-        },
-        (error: any) => {
-          notification.error({
-            message: "Не удалось войти в приложение",
-            description: JSON.stringify(error),
-          });
-          dispatch(logout());
-        }
-      );
+      .catch((error: any) => {
+        notification.error({
+          message: "Не удалось войти в приложение",
+          description: JSON.stringify(error),
+        });
+        dispatch(setUserGuest());
+      });
   };
 
   return <SignInForm onSubmit={handleSubmit} />;

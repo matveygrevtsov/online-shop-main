@@ -1,25 +1,15 @@
-import AntdLayout, { Content, Footer, Header } from "antd/es/layout/layout";
-import React, { FC, PropsWithChildren, Suspense, lazy } from "react";
-import { useNavigate } from "react-router-dom";
-import HeaderType from "header/compiled-types/Header";
-
-// @ts-ignore
-const RemoteHeader = lazy<typeof HeaderType>(() => import("header/Header"));
+import AntdLayout, { Content, Footer } from "antd/es/layout/layout";
+import React, { FC, PropsWithChildren } from "react";
+import { Header } from "../Header";
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
-  const navigate = useNavigate();
-
   return (
     <AntdLayout
       style={{
         minHeight: "100vh",
       }}
     >
-      <Header>
-        <Suspense>
-          <RemoteHeader navigate={navigate} />
-        </Suspense>
-      </Header>
+      <Header />
 
       <Content
         style={{

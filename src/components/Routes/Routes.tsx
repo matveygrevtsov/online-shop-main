@@ -7,15 +7,18 @@ import { SignInPage } from "../../pages/SignInPage/SignInPage";
 import { SignUpPage } from "../../pages/SignUpPage/SignUpPage";
 import { RoutePath } from "../../types";
 import { Spin } from "antd";
-import { useAuth } from "../../hooks/useAuth";
+import { useUserDataFromLocalStorage } from "../../hooks/useUserDataFromLocalStorage";
 import { Layout } from "../Layout";
+import { useCustomEventsHandler } from "../../hooks/useCustomEventsHandler";
 
 export const Routes = () => {
-  useAuth();
   const userStatus = useAppSelector((store) => store.user.status);
 
+  useCustomEventsHandler();
+  useUserDataFromLocalStorage();
+
   switch (userStatus) {
-    case "success": {
+    case "authorized": {
       return (
         <Layout>
           <ReactRouterDomRoutes>
@@ -26,7 +29,7 @@ export const Routes = () => {
       );
     }
 
-    case "guest": {
+    case "notAuthorized": {
       return (
         <Layout>
           <ReactRouterDomRoutes>

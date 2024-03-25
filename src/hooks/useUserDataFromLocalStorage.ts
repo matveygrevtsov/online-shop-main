@@ -3,9 +3,9 @@ import { ELocalStorageKey } from "../types";
 import { useAppDispatch } from "../store";
 import { AuthorizedUserDataSchema, userStoreActions } from "../store/userSlice";
 
-const { setUserData, setUserGuest } = userStoreActions;
+const { setUserData, logout } = userStoreActions;
 
-export const useAuth = () => {
+export const useUserDataFromLocalStorage = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const useAuth = () => {
       );
 
       if (!userDataFromLocalStorage) {
-        dispatch(setUserGuest());
+        dispatch(logout());
         return;
       }
 
@@ -26,7 +26,7 @@ export const useAuth = () => {
       if (parse.success) {
         dispatch(setUserData(parse.data));
       } else {
-        dispatch(setUserGuest());
+        dispatch(logout());
       }
     };
 

@@ -10,10 +10,10 @@ export type AuthorizedUserData = z.infer<typeof AuthorizedUserDataSchema>;
 
 export const UserStateSchema = z.union([
   z.object({
-    status: z.union([z.literal("loading"), z.literal("guest")]),
+    status: z.union([z.literal("loading"), z.literal("notAuthorized")]),
   }),
   z.object({
-    status: z.literal("success"),
+    status: z.literal("authorized"),
     userData: AuthorizedUserDataSchema,
   }),
 ]);
@@ -28,6 +28,14 @@ const slice = createSlice({
   name: "user",
   initialState,
   reducers: {
+    logout() {
+      window.localStorage.clear();
+
+      return {
+        status: "notAuthorized",
+      };
+    },
+
     setLoading() {
       return {
         status: "loading",
@@ -43,16 +51,8 @@ const slice = createSlice({
       );
 
       return {
-        status: "success",
+        status: "authorized",
         userData,
-      };
-    },
-
-    setUserGuest() {
-      window.localStorage.clear();
-
-      return {
-        status: "guest",
       };
     },
   },

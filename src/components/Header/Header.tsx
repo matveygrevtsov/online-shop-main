@@ -24,7 +24,7 @@ export const Header = () => {
 
   const items = useMemo<Items>(() => {
     switch (userData.status) {
-      case "success": {
+      case "authorized": {
         const items: Items = [
           {
             label: "ONLINE-SHOP",
@@ -35,7 +35,11 @@ export const Header = () => {
             label: "Корзина",
             key: RoutePath.Cart,
             icon: (
-              <Badge count={5} size="small">
+              <Badge
+                count={userData.userData.idsOfProductsInCart.length}
+                size="small"
+                showZero
+              >
                 <ShoppingCartOutlined />
               </Badge>
             ),
@@ -45,7 +49,7 @@ export const Header = () => {
         return items;
       }
 
-      case "guest": {
+      case "notAuthorized": {
         const items: Items = [
           {
             label: "Зарегистрироваться",
@@ -77,7 +81,7 @@ export const Header = () => {
       <Suspense>
         <RemoteHeader
           items={items}
-          onLogout={userData.status === "success" ? handleLogout : undefined}
+          onLogout={userData.status === "authorized" ? handleLogout : undefined}
         />
       </Suspense>
     </AntdHeader>

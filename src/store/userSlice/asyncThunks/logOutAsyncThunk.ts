@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { firebaseAuth } from "../../../firebase";
 import { userStoreActions } from "..";
 
-const { setLoading, setUserGuest } = userStoreActions;
+const { setLoading, logout } = userStoreActions;
 
 export const logOutAsyncThunk = createAsyncThunk<void, void>(
   "user/logOut",
@@ -10,7 +10,7 @@ export const logOutAsyncThunk = createAsyncThunk<void, void>(
     thunkAPI.dispatch(setLoading());
 
     return firebaseAuth.signOut().finally(() => {
-      thunkAPI.dispatch(setUserGuest());
+      thunkAPI.dispatch(logout());
     });
   }
 );

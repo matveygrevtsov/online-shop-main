@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
@@ -96,6 +97,14 @@ module.exports = {
     NativeFederationTestsHost({
       moduleFederationConfig,
       additionalBundlerConfig: { format: "esm" },
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "_redirects",
+          to: "./",
+        },
+      ],
     }),
   ],
   devServer: {

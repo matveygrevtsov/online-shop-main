@@ -1,8 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { ProductsList } from './components';
+import { ProductsList } from "./components";
 
-import { MOCK_PRODUCTIONS } from '../../constants';
+import { MOCK_PRODUCTIONS } from "../../constants";
+import Title from "antd/es/typography/Title";
 
+export const MainPage = () => (
+  <>
+    <Title>Каталог</Title>
 
-export const MainPage = () => <ProductsList products={MOCK_PRODUCTIONS} />;
+    <ProductsList products={MOCK_PRODUCTIONS} />
+  </>
+);

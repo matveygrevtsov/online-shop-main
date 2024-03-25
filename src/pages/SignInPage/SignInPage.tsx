@@ -3,6 +3,7 @@ import { SignInForm } from "./components/SignInForm/";
 import { UserAuthCredentials } from "../../types";
 import { useAppDispatch } from "../../store";
 import { signInAsyncThunk } from "../../store/userSlice/asyncThunks/signInAsyncThunk";
+import Title from "antd/es/typography/Title";
 
 export const SignInPage = () => {
   const dispatch = useAppDispatch();
@@ -11,5 +12,11 @@ export const SignInPage = () => {
     dispatch(signInAsyncThunk(userAuthCredentials));
   };
 
-  return <SignInForm onSubmit={handleSubmit} />;
+  return (
+    <>
+      <Title>Войти</Title>
+
+      <SignInForm onSubmit={handleSubmit} />
+    </>
+  );
 };

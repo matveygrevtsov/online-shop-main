@@ -52,14 +52,14 @@ export const Header = () => {
       case "notAuthorized": {
         const items: Items = [
           {
-            label: "Зарегистрироваться",
-            key: RoutePath.SingUp,
-            icon: <UserAddOutlined />,
-          },
-          {
             label: "Войти",
             key: RoutePath.SingIn,
             icon: <LoginOutlined />,
+          },
+          {
+            label: "Зарегистрироваться",
+            key: RoutePath.SingUp,
+            icon: <UserAddOutlined />,
           },
         ];
 

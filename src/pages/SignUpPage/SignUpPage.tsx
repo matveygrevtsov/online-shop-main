@@ -3,6 +3,7 @@ import { SignUpForm } from "./components/SignUpForm/";
 import { useAppDispatch } from "../../store";
 import { UserAuthCredentials } from "../../types";
 import { signUpAsyncThunk } from "../../store/userSlice/asyncThunks/signUpAsyncThunk";
+import Title from "antd/es/typography/Title";
 
 export const SignUpPage = () => {
   const dispatch = useAppDispatch();
@@ -11,5 +12,11 @@ export const SignUpPage = () => {
     dispatch(signUpAsyncThunk(userAuthCredentials));
   };
 
-  return <SignUpForm onSubmit={handleSubmit} />;
+  return (
+    <>
+      <Title>Зарегистрироваться</Title>
+
+      <SignUpForm onSubmit={handleSubmit} />
+    </>
+  );
 };
